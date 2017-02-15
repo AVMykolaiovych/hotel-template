@@ -13,21 +13,23 @@ $(function() {
 	//Каруселька
 	//Документация: http://owlgraphic.com/owlcarousel/
 	$('.owl-carousel').owlCarousel({
-		singleItem:true,
-		navigation:true,
+		items:1,
+		nav:true,
+		dots:true,
+		mouseDrag: false,
 		loop:true, //Зацикливаем слайдер
 		smartSpeed:1000, //Время движения слайда
-		responsive:{ //Адаптация в зависимости от разрешения экрана
-			0:{
-				items:1
-			},
-			600:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
-		}
+		// responsive:{ //Адаптация в зависимости от разрешения экрана
+		// 	0:{
+		// 		items:1
+		// 	},
+		// 	600:{
+		// 		items:1
+		// 	},
+		// 	1000:{
+		// 		items:1
+		// 	}
+		// }
 	});
 
 });
