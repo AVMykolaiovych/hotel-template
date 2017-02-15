@@ -183,13 +183,62 @@ input[type=text]
 /*Slider block*/
 .main__slider
 	width: 100%
+	position: relative
 
-.owl-item
-	background: url('../img/slider-bg.jpg') no-repeat center
+.owl-carousel .owl-item
+	background: url('../img/slider-bg.jpg') no-repeat center center
 	background-size: cover
 	box-sizing: border-box
-	height: 500px
+	height: 788px
 
+.slider-icon
+	color: rgb(0, 0, 0)
+
+.owl-theme .owl-nav .owl-prev
+	position: absolute
+	top: 47.335%
+	left: 10px
+	width: 42px
+	height: 42px
+	margin-left: 8.7231%
+	padding: 8px 7px
+	background-color: transparent
+	border-radius: 50%
+	border: 2px solid rgba(19, 19, 19, .2)
+	&:hover, &:focus
+		background-color: $color-main
+
+.owl-theme .owl-nav .owl-next
+	position: absolute
+	top: 47.335%
+	right: 10px
+	width: 42px
+	height: 42px
+	margin-right: 8.7231%
+	padding: 8px 7px
+	background-color: transparent
+	border-radius: 50%
+	border: 2px solid rgba(19, 19, 19, .2)
+	&:hover, &:focus
+		background-color: $color-main
+
+.owl-theme .owl-dots
+	position: absolute
+	bottom: 30px
+	left: 47.4777%
+	display: inline-block
+
+.owl-theme .owl-dots .owl-dot span
+	width: 8px
+	height: 8px
+	background: transparent
+	border-radius: 50%
+	border: 2px solid rgba(255, 255, 255, .5)
+	&:hover, &:focus
+		background-color: rgb(255, 255, 255)
+		border-color: rgb(255, 255, 255)
+	&.active
+			background: transparent
 				
 			 
 			
