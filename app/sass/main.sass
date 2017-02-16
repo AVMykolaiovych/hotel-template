@@ -182,11 +182,11 @@ input[type=text]
 
 /*Slider block*/
 .main__slider
-	width: 100%
+	// width: 100%
 	position: relative
 
 .owl-carousel .owl-item
-	background: url('../img/slider-bg.jpg') no-repeat center center
+	background: url('../img/slider-bg.jpg') no-repeat
 	background-size: cover
 	box-sizing: border-box
 	height: 788px
@@ -237,8 +237,19 @@ input[type=text]
 	&:hover, &:focus
 		background-color: rgb(255, 255, 255)
 		border-color: rgb(255, 255, 255)
-	&.active
-			background: transparent
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span,
+.owl-theme .owl-dots .owl-dot.focus span
+	background: transparent
+
+.slider__item
+	position: absolute
+	left: 200px
+	top: 50px
+	z-index: 2 
+	&-title
+		display: inline-block
 				
 			 
 			
