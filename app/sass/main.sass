@@ -83,6 +83,7 @@ input[type=text]
 	display: block
 	max-width: 100%
 	height: auto
+	position: relative
 
 .p0 
 	padding: 0 !important
@@ -416,19 +417,108 @@ input[type=text]
 		display: block
 		width: 100%
 		max-width: 273px
+		text-transform: uppercase
+		font-size: 13px
 		&-list
 			display: block
-			text-transform: uppercase
-			font-size: 13px
-		&-item
 			width: 100%
-			height: 42px
 			line-height: 42px
-			background-color: white
+			background-color: $color-white
+			border-radius: 7px
+		&-item
 			border-bottom: 1px solid rgb(223, 228, 238)
 		&-link
-			padding-left: 20px
+			display: block
+			padding: 0 18px 0 20px
 			color: rgb(52, 62, 92)
+			&:after
+				content: ' '
+				display: inline-block
+				background: url('../img/nav-icon.png') no-repeat
+				float: right
+				margin-top: 16px 
+				width: 6px
+				height: 10px
+				cursor: pointer
+			&:hover:after
+				transform: rotate(90deg)
+		&-sublist
+			display: none
+			line-height: 41px
+		&-subitem
+			border-top: 1px solid rgb(223, 228, 238)
+		&-sublink
+			display: block
+			padding: 0 18px 0 20px
+			font-size: 11px
+			color: rgb(161, 168, 189)
+	&__options
+		padding-bottom: 30px
+	&__selection
+		position: absolute
+		width: 164px
+		line-height: 25px
+		bottom: 50px
+		left: 45px
+		color: rgb(180, 143, 95)
+		font-family: $myriad-pro-regular
+		font-size: 20px
+		text-transform: uppercase
+		&-second
+			left: 90px
+		&-third
+			left: 80px
+	&__offers
+		padding-bottom: 30px
+		&-title
+			width: 100%
+			height: 75px
+			padding: 20px 25px
+			background-color: $color-white
+			border-radius: 0px 0px 5px 5px
+			position: relative
+		&-header
+			color: rgb(34, 35, 40)
+			letter-spacing: 2px
+		&-text
+			color: rgba(58, 64, 91, .3)
+			font-size: 12px
+			text-transform: uppercase
+		&-star
+			position: absolute
+			right: 60px
+			top: 22.5px
+		&-link
+			margin-right: 8px
+	&__paginator
+		display: inline-block
+		width: 100%
+		background-color: $color-white
+		font-size: 14px
+		margin-top: 20px
+		border-radius: 5px
+		text-align: center
+		height: 90px
+		&-link
+			display: inline-block
+			color: rgb(58, 64, 91)
+			width: 48px
+			height: 48px
+			padding: 0 10px
+			line-height: 90px
+			transition: linear
+			&:hover
+				vertical-align: middle
+				border-radius: 50%
+				box-shadow: 0 20px 40px rgba(168, 172, 185, 0.62)
+
+
+
+
+
+
+
+
 
 
 

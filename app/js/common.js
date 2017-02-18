@@ -16,9 +16,9 @@ $(function() {
 		items:1,
 		nav:true,
 		navText: [
-      "<i class='icon-left-open slider-icon'></i>",
-      "<i class='icon-right-open slider-icon'></i>"
-      ],
+		"<i class='icon-left-open slider-icon'></i>",
+		"<i class='icon-right-open slider-icon'></i>"
+		],
 		dots:true,
 		mouseDrag: false,
 		loop:true, //Зацикливаем слайдер
@@ -35,6 +35,15 @@ $(function() {
 			}
 		}
 	});
+
+	$('.gallery__nav-link').click(function() {
+		var checkElement = $(this).next();
+		checkElement.stop().animate({'height':'toggle'}, 500);
+		if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+			return false;
+		}
+	});
+
 
 
 });
