@@ -319,7 +319,6 @@ input[type=text]
 /*Section gallery*/
 .gallery
 	background-color: rgb(228, 229, 231) 
-	height: 3370px
 	&__top
 		padding: 50px 0 30px
 		width: 100%
@@ -470,6 +469,32 @@ input[type=text]
 			left: 80px
 	&__offers
 		padding-bottom: 30px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 10px
+			left: 86px
+			display: inline-block
+			width: 0
+			height: 0
+			border: 12px solid rgb(28, 30, 35)
+			border-right: 4px solid transparent
+		&-price
+			position: absolute
+			display: inline-block
+			line-height: 24px
+			padding-left: 10px
+			width: 86px
+			height: 24px
+			background-color: rgb(28, 30, 35)
+			color: rgb(180, 143, 95)
+			font-size: 12px
+			font-family: $montserrat-regular
+			text-transform: uppercase
+			top: 10px
+		&-currency
+			font-size: 10px
 		&-title
 			width: 100%
 			height: 75px
@@ -479,7 +504,7 @@ input[type=text]
 			position: relative
 		&-header
 			color: rgb(34, 35, 40)
-			letter-spacing: 2px
+			letter-spacing: 1px
 		&-text
 			color: rgba(58, 64, 91, .3)
 			font-size: 12px
@@ -491,38 +516,166 @@ input[type=text]
 		&-link
 			margin-right: 8px
 	&__paginator
-		display: inline-block
 		width: 100%
 		background-color: $color-white
-		font-size: 14px
-		margin-top: 20px
+		margin: 20px 0 50px
 		border-radius: 5px
-		text-align: center
-		height: 90px
-		&-link
+		&-list
 			display: inline-block
+			width: 100%
+			text-align: center
+		&-item
+			display: inline
+		&-link
+			font-size: 14px
+			padding: 15px 20px
 			color: rgb(58, 64, 91)
-			width: 48px
-			height: 48px
-			padding: 0 10px
-			line-height: 90px
 			transition: linear
+			line-height: 90px
 			&:hover
-				vertical-align: middle
+				background-color: $color-white
 				border-radius: 50%
 				box-shadow: 0 20px 40px rgba(168, 172, 185, 0.62)
+		&-left
+			margin-left: 100px 
+			margin-right: 205px
+		&-right
+			margin-left: 205px 
+			margin-right: 100px
+/*End Gallery section*/
 
+/*Chance block*/
+.chance
+	background: url('../img/second-bg.jpg') no-repeat
+	background-size: cover
+	&__logo
+		padding-top: 50px
+		text-align: center
+		line-height: 24px
+		&-img
+			width: 110px
+			height: 109px
+		&-heading
+			padding: 50px 0 20px
+			color: $color-chance
+			font-family: $montserrat-extreme
+			font-size: 32px
+			text-transform: uppercase
+		&-text
+			padding-bottom: 50px
+			color: $color-chance
+			font-family: $lato-light
+			font-size: 32px
+			text-transform: uppercase
+		&-subtext
+			padding-bottom: 95px
+			line-height: 12px
+			color: $color-chance
+			font-family: $lato-light
+			font-size: 15px
+			letter-spacing: 10px
+			text-transform: uppercase
+/*End of chance block*/
 
+/*Partners block*/
+.partners
+	background-color: rgb(228, 229, 231) 
+	&__logo
+		padding-top: 55px
+		color: rgb(34, 35, 40)
+		font-family: $montserrat-black
+		font-size: 32px
+		text-align: center
+		text-transform: uppercase
+		&-heading
+			line-height: 24px
+			padding: 50px 0 70px
+			background: $color-white
+	&__brand
+		display: block
+		background: $color-white 
+		width: 100%
+		margin-bottom: 55px
+		&-logotips
+			height: 167px
+			max-width: 1170px
+			margin: 0 auto
+		&-img
+			display: table-cell
+			height: 117px
+			line-height: 117px
+			vertical-align: middle
+			text-align: center
+/*End of partners block*/
 
-
-
-
-
-
-
-
-
-
+/*Footer block*/
+.footer
+	background: url('../img/second-bg.jpg') no-repeat
+	background-size: cover
+	&__wrap
+		width: 100%
+		max-width: 1170px
+		margin: 0 auto
+	&__logo
+		padding: 32px 0 17px
+		text-align: center
+		text-transform: uppercase
+		line-height: 0.7
+		color: $color-main
+		&-text 
+			padding-top: 15px
+			line-height: 10px
+		&-underline
+			font-size: 10px
+			letter-spacing: 1.8px
+			color: rgb(99, 106, 110)
+	&__nav
+		font-size: 14px
+		text-transform: uppercase
+		padding: 60px 0 9px 0
+		&-list
+			text-align: center
+			list-style: none
+		&-item
+			display: inline-block
+			&-active a
+				border-radius: 25px
+				background-color: $color-main
+				color: $color-hover
+		&-link 
+			display: block
+			width: 100%
+			color: $color-main
+			padding: 5px 10px
+			transition: 0s
+			&:hover, &:active, &:focus
+				border-radius: 25px
+				background-color: $color-main
+				color: $color-hover
+	&__social 
+		display: inline-block
+		font-size: 20px
+		padding-top: 60px
+		float: right
+		&-link
+			display: inline-block
+			color: $color-chance
+			&:hover, &:active, &:focus
+				color: $color-hover
+	&__line
+		background-color: rgba(255, 255, 255, .05)
+		height: 1px
+	&__direction
+		padding: 20px 0 75px
+		color: $color-chance
+		font-family: $myriad-pro-regular
+		font-size: 14px
+	&__address
+		padding-top: 20px
+		color: $color-chance
+		font-family: $lato-light
+		font-size: 14px
+/*End of footer block*/
 
 @import "media" // Always to bottom
 
